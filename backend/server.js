@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const itemsRouter = require('./routes/items');
 
 require('dotenv').config();
 
@@ -19,7 +20,7 @@ const connectToMongo = async () => {
         await mongoose.connect(uri, { 
             useUnifiedTopology: true, useNewUrlParser: true,
         });
-        console.log('mongoose is connected...🦌')
+        console.log('mongoose is connected...🦌');
     } catch(e) {
         console.log('could not connect', e);
     }
@@ -27,5 +28,6 @@ const connectToMongo = async () => {
 connectToMongo();
 
     
+app.use('/', itemsRouter);
 
 app.listen(port, () => console.log(`Smart Cart 🛒 on reusable port ${port}!`))
