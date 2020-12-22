@@ -14,8 +14,18 @@ const itemSchema = new Schema({
     },
     price: {
         type: Number,
+        get: getPrice,
+        set: setPrice
     }
 });
+// Getter
+    function getPrice(num) {
+        return (num/1000).toFixed(2);
+    }
+// Setter
+    function setPrice(num) {
+        return num * 1000;
+    }
 
 const Item = mongoose.model('Item', itemSchema);
 
