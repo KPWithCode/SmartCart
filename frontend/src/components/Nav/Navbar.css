@@ -1,0 +1,58 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.main-nav-logo {
+    font-size: 2em; 
+    font-weight: 800;
+}
+
+.main-nav-logo a {
+    text-decoration: none;
+    color: #459922;
+    /* color: #6bf222; */
+}
+
+.main-nav-items {
+    margin-left: 1.5em;
+    font-weight: 600;
+}
+
+.main-nav-items ul {
+    display: flex;
+    list-style: none;
+    padding-left: 2%;
+    padding-right: 2%; 
+}
+
+.main-nav-items li {
+    margin: 0 3em;
+    font-size: 1.2em;
+}
+
+/* Selects Navlink */
+.main-nav-items a,
+.main-nav-items button {
+    text-decoration: none;
+    color: #459922;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    background: transparent;
+}
+
+.main-nav-items a:hover,
+.main-nav-items a:active,
+.main-nav-items a.active,
+.main-nav-items button:hover,
+.main-nav-items button:active {
+    position: relative;
+    top: -25%;
+    color:#6bf222;
+}
