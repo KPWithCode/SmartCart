@@ -2,7 +2,7 @@
     display: flex;
     border: 6px solid #063301;
     padding-left: 2%;
-    padding-right: 2%;
+    padding-right: 1%;
     
 }
 
@@ -17,14 +17,14 @@
 
 .item-shop {
     width: 32%;
-    padding-bottom: 30%; /* Same as width, sets height */
-    margin-bottom: 2%; /* (100-32*3)/2 */
+    padding-bottom: 30%;
+    margin-bottom: 2%; 
     position: relative;
     border: 2px solid #063301;
 }
-.cart {
+.cart-container {
     flex-grow: 2;
     border: 3px dotted orange;
     margin-left: 1%;
-
+    margin-bottom: 2%;
 }
