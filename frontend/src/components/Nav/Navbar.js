@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Cart from '../../assets/eshopping.jpg';
 import './Navbar.css';
 
 const Nav = () => {
@@ -8,7 +9,7 @@ const Nav = () => {
         <div>
             <nav className="main-nav">
                 <div className="main-nav-logo">
-                    <NavLink to="/">SmartCart</NavLink>
+                    <NavLink to="/"><img className="logo" src={Cart} alt="smartcart logo" /></NavLink>
                 </div>
                 <nav className="main-nav-items">
                     <ul>
@@ -17,7 +18,7 @@ const Nav = () => {
                     </ul>
                 </nav>
             </nav>
-            <hr style={{ width: '90%', marginTop: '2em' }} />
+            <hr />
         </div>
     )
 }
