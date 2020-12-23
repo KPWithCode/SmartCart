@@ -7,35 +7,59 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
 
+
+    const pageVariants = {
+        hidden: {
+            opacity: 0
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                delay: 1,
+                duration: 1.2
+            }
+        },
+        exit: {
+         y: '-100vh',
+         transition: {
+             ease: 'easeOut',
+             duration: 1
+         }
+        } 
+    };
+
     return (
-        <motion.div 
-        className="main"
-        >
-            <div className="container">
-                <img className="background-img" src={garden} alt="flower girl" />
-                <div>
-                    <h1 className="title">SmartCart</h1>
+            <motion.div className="main"
+                variants={pageVariants}
+                initial= "hidden"
+                animate="visible"
+                exit="exit"
+            >
+                <div className="container">
+                    <img className="background-img" src={garden} alt="flower girl" />
+                    <div>
+                        <h1 className="title">SmartCart</h1>
+                    </div>
+                    <div>
+                        <h1 className="subtitle">Shop Now</h1>
+                        <motion.div
+                            animate={{
+                                scale: [.7, 1.23, 1.23, 1, .7],
+                                rotate: [0, 0, 360, 360, 0],
+                            }}
+                            transition={{
+                                duration: 2,
+                                ease: "easeInOut",
+                                times: [0, 0.2, 0.5, 0.8, 1],
+                                loop: Infinity,
+                                repeatDelay: 3
+                            }}>
+                            <Link to="/shop"><ArrowDownwardIcon style={{ color: '#063301', fontSize: '6em' }} /></Link>
+                        </motion.div>
+                    </div>
                 </div>
-                <div>
-                    <h1 className="subtitle">Shop Now</h1>
-                    <motion.div
-                        animate={{
-                            scale: [.7, 1.23, 1.23, 1, .7],
-                            rotate: [0, 0, 360, 360, 0],
-                        }}
-                        transition={{
-                            duration: 2,
-                            ease: "easeInOut",
-                            times: [0, 0.2, 0.5, 0.8, 1],
-                            loop: Infinity,
-                            repeatDelay: 3
-                        }}>
-                        <Link to="/shop"><ArrowDownwardIcon style={{ color: '#063301', fontSize: '6em' }} /></Link>
-                    </motion.div>
-                </div>
-            </div>
-        </motion.div>
+            </motion.div>
     )
-}
+};
 
 export default Home;
