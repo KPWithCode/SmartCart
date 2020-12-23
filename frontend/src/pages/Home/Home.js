@@ -8,7 +8,9 @@ import { Link } from 'react-router-dom';
 const Home = () => {
 
     return (
-        <div className="main">
+        <motion.div 
+        className="main"
+        >
             <div className="container">
                 <img className="background-img" src={garden} alt="flower girl" />
                 <div>
@@ -32,7 +34,7 @@ const Home = () => {
                     </motion.div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
