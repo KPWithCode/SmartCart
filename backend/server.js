@@ -26,8 +26,7 @@ const connectToMongo = async () => {
     }
 };
 connectToMongo();
-
     
-app.use('/', itemsRouter);
+app.use('/api', itemsRouter);
 
 app.listen(port, () => console.log(`Smart Cart 🛒 on reusable port ${port}!`))

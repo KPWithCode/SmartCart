@@ -3,7 +3,7 @@ const router = require('express').Router();
 let Item = require('../models/itemmodel');
 
 
-router.get('/', async (req, res) => {
+router.get('/items', async (req, res) => {
     try {
         const getItems = await Item.find();
         res.json(getItems)
