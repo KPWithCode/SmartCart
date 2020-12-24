@@ -4,13 +4,16 @@ const Schema = mongoose.Schema;
 
 const itemSchema = new Schema({
     name: {
-          type: String,
-          required: true
+        type: String,
+        required: true
     },
     category: {
-      type: String,
-      enum: ['Fresh Produce', 'Herbs', 'Nuts', 'Snacks','Super Foods'],
-      default: 'Snacks'
+        type: String,
+        enum: ['Fruits', 'Herbs', 'Nuts', 'Snacks', 'Super Foods'],
+        default: 'Snacks'
+    },
+    image: {
+        type: String
     },
     price: {
         type: Number,
@@ -19,13 +22,13 @@ const itemSchema = new Schema({
     }
 });
 // Getter
-    function getPrice(num) {
-        return (num/1000).toFixed(2);
-    }
+function getPrice(num) {
+    return (num / 1000).toFixed(2);
+}
 // Setter
-    function setPrice(num) {
-        return num * 1000;
-    }
+function setPrice(num) {
+    return num * 1000;
+}
 
 const Item = mongoose.model('Item', itemSchema);
 

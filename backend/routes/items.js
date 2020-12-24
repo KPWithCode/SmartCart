@@ -17,6 +17,7 @@ router.post('/add', async (req, res) => {
     const newItem = new Item({
         name: req.body.name,
         category: req.body.category,
+        image: req.body.image,
         price: Number(req.body.price)
     });
     try {
