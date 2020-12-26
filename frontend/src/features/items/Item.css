@@ -21,6 +21,7 @@
     margin-bottom: 2%; 
     position: relative;
     border: 2px solid #063301;
+    margin-top: 2%;
 }
 .cart-container {
     flex-grow: 2;
