@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
 
 
-    const pageVariants = {
+    const homeVariants = {
         hidden: {
             opacity: 0
         },
@@ -30,7 +30,7 @@ const Home = () => {
 
     return (
         <motion.div className="main"
-            variants={pageVariants}
+            variants={homeVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
