@@ -15,8 +15,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-width: 80%;
-    max-width: 80%;
+    min-width: 75%;
+    max-width: 75%;
     margin-bottom: 4%;
 }
 @media screen and (max-width: 700px) {
@@ -48,7 +48,6 @@
     border-radius: 15%;
     width: 40%;
     height: 10vh;
-    object-fit: cover;  
 }
 .item-name {
     text-align: center;
@@ -80,15 +79,4 @@
     top: -1%
 }
 
-.cart-container {
-    flex-grow: 1;
-    margin-right: 1%;
-    margin-bottom: 2%;
-    border: 3px dotted orange;
-}
 
-@media screen and (max-width: 700px) {
-    .cart-container {
-        display: none;
-    }
-}
