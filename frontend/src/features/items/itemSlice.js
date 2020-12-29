@@ -16,17 +16,35 @@ const itemSlice = createSlice({
     initialState: {
         items: [],
         cart: [],
+        count: 1,
         status: null,
     },
     reducers: {
-        add({ cart }, { payload }) {
-            cart.push(payload)
+        add(state, { payload }) {
+            // const cartItems = state.cart.slice();
+            // let inCart = false;
+            //     if (cartItems._id === payload._id) {
+            //         state.value++
+            //         inCart = true
+            //     }
+            // if (!inCart) {
+            //     state.cart.push({...payload})
+            // }
+            state.cart.push(payload);
         },
-        del(state, action) {
-            // const itemId = cart.map(i => i._id)
-            return state.cart.filter(product => product._id !== action._id)
-            // cart.shift(payload)
+        del({cart}, {payload}) {
+            cart.pop(payload)
         },
+        increment: ({count},action) => {
+            const { itemId, value } = action.payload;
+            count[itemId] = count[itemId] + value;
+            
+            // state.value += 1;
+        },
+        decrement: state => {
+            state.value -= 1;
+        },
+
     },
     extraReducers: {
         [getItems.pending]: (state) => {
@@ -42,6 +60,7 @@ const itemSlice = createSlice({
     }
 });
 
-export const { add, del } = itemSlice.actions;
+export const selectCount = state => state.items.value;
+export const { add, del, increment, decrement } = itemSlice.actions;
 
 export default itemSlice.reducer;
