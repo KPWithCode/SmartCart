@@ -1,10 +1,21 @@
+.toggle {
+    text-align: center;
+    width: 100%;
+    margin-left: 40%;
+    border: 1px solid #063301 ;
+    background-color: transparent;
+    color: #063301;
+    padding: .3em;
+    cursor: pointer;
+    margin-right: 40%;
+    margin-bottom: 1%;
+}
+
 .main-shop {
     display: flex;
     background-color: white;
     background: linear-gradient(to bottom, white, #f4ffea, #c3d9aa, #becea8);
     color: transparent;
-    padding-top: 4%;
-    margin-top: 5%;
     overflow: hidden;
     min-height: 80vh;
 }
@@ -17,7 +28,7 @@
     justify-content: space-between;
     min-width: 75%;
     max-width: 75%;
-    margin-bottom: 4%;
+    margin-bottom: 10%;
 }
 @media screen and (max-width: 700px) {
     .container-products {
@@ -35,8 +46,9 @@
     width: 100%;
     flex: 0 1 30%;
     flex-flow: row wrap;
-    height: 50%;
+    height: 45%;
     margin-bottom: 2%;
+    padding-bottom: 5%;
     border: 1px solid #063301;
 }
 
@@ -59,19 +71,22 @@
 
 .button {
     position: relative;
-    margin-left: 30%;
     background-color: transparent;
-    border:  #063301 solid 3px;
-    width: 40%;
+    border:  #063301 solid 1px;
+    text-align: center;
+    width: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
     height: 15%;
     border-radius: 15%;
 }
-.button:hover, .button:active {
+.button:hover, .button:active, .button:focus {
     position: relative;
-    margin-left: 30%;
     background-color: transparent;
-    border:  #063301 solid 3px;
-    width: 40%;
+    border:  #063301 solid 1px;
+    width: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
     height: 15%;
     border-radius: 15%;
     outline: none;
