@@ -4,22 +4,19 @@ import { getItems, add } from './itemSlice';
 import { motion } from 'framer-motion';
 import Cart from '../cart/Cart';
 import './Item.css';
-import { selectCount } from '../counter/counterSlice';
 
 const Items = () => {
     const {items} = useSelector(state => state.items);
     const [toggle, setToggle] = useState(false);
-    const count = useSelector(selectCount);
 
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(getItems({ limit: 6 }));
-    }, []);
+    }, [dispatch]);
 
     const toggleCart = () => {
         setToggle(!toggle);
-        console.log('toggle', toggle)
     }
 
     const itemVariants = {
@@ -59,13 +56,13 @@ const Items = () => {
                             <img className="item-image" src={item.image} alt="SmartCart Items" />
                             <h4 className="item-name">{item.name}</h4>
                         </div>
-                        <div>{count}</div>
                         <button className="button" onClick={() => dispatch(add(item))}>Add</button>
                     </div>
                 )
             })}
         </div>
-        {toggle == false ? null : <Cart />}
+        {/* and cart is empty show null */}
+        {toggle === false ? null : <Cart />}
             
         </motion.div>
     );

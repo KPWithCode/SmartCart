@@ -16,34 +16,51 @@ const itemSlice = createSlice({
     initialState: {
         items: [],
         cart: [],
-        count: 1,
+        value: 1,
         status: null,
     },
     reducers: {
         add(state, { payload }) {
-            // const cartItems = state.cart.slice();
-            // let inCart = false;
-            //     if (cartItems._id === payload._id) {
-            //         state.value++
-            //         inCart = true
-            //     }
-            // if (!inCart) {
-            //     state.cart.push({...payload})
-            // }
-            state.cart.push(payload);
+            const itemId = state.cart.map(cartItem => {
+                return cartItem._id
+            });
+           
+            if (itemId.includes(payload._id.toString())) {     
+                return;
+            } else {
+                state.cart.push(payload)
+            }
         },
-        del({cart}, {payload}) {
-            cart.pop(payload)
+        clear(state, action) {
+            state.cart = []
         },
-        increment: ({count},action) => {
-            const { itemId, value } = action.payload;
-            count[itemId] = count[itemId] + value;
-            
-            // state.value += 1;
-        },
-        decrement: state => {
+        // increment: ({count},action) => {
+        //     const { itemId, value } = action.payload;
+        //     count[itemId] = count[itemId] + value;    
+        //     // state.value += 1;
+        //     // let itemToUpdate = null;
+        //     //     let idOfItemToUpdate = null;
+        //     //     for (let i = 0; i < state.length; i++) {
+        //     //         const currentItem = state[i];
+        //     //         if (currentItem.id === action.id) {
+        //     //             itemToUpdate = currentItem;
+        //     //             idOfItemToUpdate = i;
+        //     //         }
+        //     //     }
+        //     //     const updatedState = [...state];
+        //     //     updatedState[idOfItemToUpdate] = {
+        //     //         ...updatedState[idOfItemToUpdate],
+        //     //         quantity: action.quantity,
+        //     //     };
+        //     //     saveState(updatedState);
+        //     //     return updatedState;
+        // },
+        increment: state => {
+            state.value += 1;
+          },
+          decrement: state => {
             state.value -= 1;
-        },
+          },
 
     },
     extraReducers: {
@@ -61,6 +78,6 @@ const itemSlice = createSlice({
 });
 
 export const selectCount = state => state.items.value;
-export const { add, del, increment, decrement } = itemSlice.actions;
+export const { add, clear, increment, decrement } = itemSlice.actions;
 
 export default itemSlice.reducer;
