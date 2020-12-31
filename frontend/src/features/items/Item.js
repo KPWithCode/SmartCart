@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getItems, add } from './itemSlice';
 import { motion } from 'framer-motion';
 import Cart from '../../components/cart/Cart';
+import itemVariants from './ItemVariants';
 import './Item.css';
 
 const Items = () => {
@@ -18,26 +19,6 @@ const Items = () => {
     const toggleCart = () => {
         setToggle(!toggle);
     }
-
-    const itemVariants = {
-        hidden: {
-            opacity: 0
-        },
-        visible: {
-            opacity: 1,
-            transition: {
-                delay: 1,
-                duration: 1.2
-            }
-        },
-        exit: {
-            y: '-100vh',
-            transition: {
-                ease: 'easeOut',
-                duration: 1
-            }
-        }
-    };
     const curatedItems = items.data;
     return (
         <motion.div className="main-shop"
@@ -52,7 +33,7 @@ const Items = () => {
             {curatedItems && curatedItems.map((item, index) => {
                 return (
                     <div key={index} className="item-card">
-                        <div className="">
+                        <div>
                             <img className="item-image" src={item.image} alt="SmartCart Items" />
                             <h4 className="item-name">{item.name}</h4>
                         </div>
@@ -61,9 +42,7 @@ const Items = () => {
                 )
             })}
         </div>
-        {/* and cart is empty show null */}
         {toggle === false ? null : <Cart />}
-            
         </motion.div>
     );
 

@@ -4,29 +4,29 @@ import garden from '../../assets/gardengirl.jpeg';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import homeVariants from './HomeVariants';
 const Home = () => {
 
 
-    const homeVariants = {
-        hidden: {
-            opacity: 0
-        },
-        visible: {
-            opacity: 1,
-            transition: {
-                delay: 1,
-                duration: 1.2
-            }
-        },
-        exit: {
-            y: '-100vh',
-            transition: {
-                ease: 'easeOut',
-                duration: 1
-            }
-        }
-    };
+    // const homeVariants = {
+    //     hidden: {
+    //         opacity: 0
+    //     },
+    //     visible: {
+    //         opacity: 1,
+    //         transition: {
+    //             delay: 1,
+    //             duration: 1.2
+    //         }
+    //     },
+    //     exit: {
+    //         y: '-100vh',
+    //         transition: {
+    //             ease: 'easeOut',
+    //             duration: 1
+    //         }
+    //     }
+    // };
 
     return (
         <motion.div className="main"
