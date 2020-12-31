@@ -5,7 +5,7 @@ const Shop = () => {
 
     return (
         <>
-        <Items />
+            <Items />
         </>
     );
 };

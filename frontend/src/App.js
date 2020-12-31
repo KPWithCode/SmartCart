@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch, useLocation } from 'react-router-dom'
 import Home from './pages/Home/Home';
 import Shop from './pages/Shop/Shop';
-import Navbar from './components/Nav/Navbar';
+import Navbar from './components/nav/Navbar';
 import { AnimatePresence } from 'framer-motion';
 
 const App = () => {

@@ -34,34 +34,6 @@ const itemSlice = createSlice({
         clear(state, action) {
             state.cart = []
         },
-        // increment: ({count},action) => {
-        //     const { itemId, value } = action.payload;
-        //     count[itemId] = count[itemId] + value;    
-        //     // state.value += 1;
-        //     // let itemToUpdate = null;
-        //     //     let idOfItemToUpdate = null;
-        //     //     for (let i = 0; i < state.length; i++) {
-        //     //         const currentItem = state[i];
-        //     //         if (currentItem.id === action.id) {
-        //     //             itemToUpdate = currentItem;
-        //     //             idOfItemToUpdate = i;
-        //     //         }
-        //     //     }
-        //     //     const updatedState = [...state];
-        //     //     updatedState[idOfItemToUpdate] = {
-        //     //         ...updatedState[idOfItemToUpdate],
-        //     //         quantity: action.quantity,
-        //     //     };
-        //     //     saveState(updatedState);
-        //     //     return updatedState;
-        // },
-        increment: state => {
-            state.value += 1;
-          },
-          decrement: state => {
-            state.value -= 1;
-          },
-
     },
     extraReducers: {
         [getItems.pending]: (state) => {

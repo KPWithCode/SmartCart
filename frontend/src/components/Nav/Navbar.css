@@ -21,7 +21,6 @@
 .main-nav-logo a {
     text-decoration: none;
     color: #063301;
-    /* color: #6bf222; */
 }
 
 .main-nav-items {
@@ -38,10 +37,9 @@
 
 .main-nav-items li {
     margin: 0 3em;
-    font-size: 1.2em;
+    font-size: 2em;
 }
 
-/* Selects Navlink */
 .main-nav-items a,
 .main-nav-items button {
     text-decoration: none;

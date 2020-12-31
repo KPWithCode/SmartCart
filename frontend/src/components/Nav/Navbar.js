@@ -13,7 +13,6 @@ const Nav = () => {
                 </div>
                 <nav className="main-nav-items">
                     <ul>
-                        <li><NavLink to="/orders">Orders</NavLink></li>
                         <li><NavLink to="/shop">Shop</NavLink></li>
                     </ul>
                 </nav>

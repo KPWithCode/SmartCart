@@ -2,9 +2,8 @@ import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import {
     clear
-} from '../items/itemSlice';
+} from '../../features/items/itemSlice';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
-import Counter from '../counter/Counter';
 import './Cart.css';
 
 const Cart = () => {
@@ -24,7 +23,7 @@ const Cart = () => {
                                 <div className="cart-item">
                                     <img className="cart-item-image" src={item.image} alt="curated item" />
                                     <h4>{item.name}</h4>
-                                    <Counter />
+                                    <h3>$ {(item.price / 1000).toFixed(2)}</h3>
                                 </div>
                             </div>
                         </div>

@@ -1,3 +1,5 @@
-## cd into backend && npm start to run api
+## Instructions:
 
-## cd into frontend && npm start 
+**cd into backend && npm start to run api**
+
+**cd into frontend && npm start** 

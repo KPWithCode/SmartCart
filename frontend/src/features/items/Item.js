@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getItems, add } from './itemSlice';
 import { motion } from 'framer-motion';
-import Cart from '../cart/Cart';
+import Cart from '../../components/cart/Cart';
 import './Item.css';
 
 const Items = () => {
