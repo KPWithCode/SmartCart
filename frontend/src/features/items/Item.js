@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getItems, add } from './itemSlice';
 import { motion } from 'framer-motion';
-import Cart from '../../components/cart/Cart';
-import itemVariants from './ItemVariants';
-import './Item.css';
+import Cart from '../../components/cart/cart';
+import itemVariants from '../../variants/itemVariants';
+import './item.css';
 
 const Items = () => {
     const {items} = useSelector(state => state.items);

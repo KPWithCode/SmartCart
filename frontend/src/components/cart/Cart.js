@@ -4,7 +4,7 @@ import {
     clear
 } from '../../features/items/itemSlice';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
-import './Cart.css';
+import './cart.css';
 
 const Cart = () => {
     const cart = useSelector(state => state.items.cart)

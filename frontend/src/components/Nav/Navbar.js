@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Cart from '../../assets/eshopping.jpg';
-import './Navbar.css';
+import './navbar.css';
 
 const Nav = () => {
 

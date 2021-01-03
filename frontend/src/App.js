@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch, useLocation } from 'react-router-dom'
-import Home from './pages/Home/Home';
+import Home from './pages/home/home';
 import Shop from './pages/Shop/Shop';
-import Navbar from './components/nav/Navbar';
+import Navbar from './components/nav/navbar';
 import { AnimatePresence } from 'framer-motion';
 
 const App = () => {

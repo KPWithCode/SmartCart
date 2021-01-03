@@ -2,7 +2,6 @@
     display: flex;
     background-color: #e2ffc8;
     background-image: linear-gradient(to bottom,white,#e2ffc8,#c3d9aa,#adbd94,#9ead8a);
-    /* background-image: linear-gradient(to bottom,white,#c3d7ff); */
     color: transparent;
     padding-top: 4%;
     padding-bottom: 0;
@@ -20,19 +19,6 @@
     font-size: 3.5em;
     
 }
-
-/* .subtitle {
-    background-image: linear-gradient(to left,#459922,#ffa060); -webkit-background-clip: text;
-    color: transparent;
-    font-size: 2em;
-    width: 100%;
-    position: absolute;
-    top:110%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    padding-bottom: 2em;
-} */
-
 .background-img {
     width: 60%;
     object-fit: cover;
